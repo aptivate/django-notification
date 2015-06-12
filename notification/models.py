@@ -17,7 +17,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.utils.translation import ugettext, get_language, activate
 
 from django.contrib.sites.models import Site
-from django.contrib.auth.models import User
+User = getattr(settings, 'AUTH_USER_MODEL', 'auth.User')
 from django.contrib.auth.models import AnonymousUser
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes import generic
